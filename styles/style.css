@@ -166,9 +166,14 @@ body {
   color: white;
 }
 
-@supports (animation-timeline: text3-timeline) {
+@supports (animation-timeline: my-timeline) {
   .attention {
     display: none;
+  }
+}
+@supports not (animation-timeline: my-timeline) {
+  * {
+    animation-duration: 0s !important;
   }
 }
 .credit {

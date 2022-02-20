@@ -179,11 +179,19 @@ body {
   color: white;
 }
 
-@supports (animation-timeline: text3-timeline) {
+@supports (animation-timeline: my-timeline) {
   .attention {
     display: none;
   }
 }
+
+// @animation-timeline非対応ブラウウザでは、アニメーションをOFFにする
+@supports not (animation-timeline: my-timeline) {
+  * {
+    animation-duration: 0s !important;
+  }
+}
+
 
 .credit {
   margin-top: 24px;
