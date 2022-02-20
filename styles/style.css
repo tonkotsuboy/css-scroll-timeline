@@ -10,33 +10,30 @@ body {
 }
 
 .main {
-  padding-bottom: 140px;
+  padding-top: 140px;
   padding-bottom: 24px;
   position: relative;
   overflow: hidden;
   background-image: url(../images/bubble_S.svg), url(../images/bubble_L.svg);
-
   animation-name: beer-animation;
   animation-timeline: beer-timeline;
   animation-duration: 10s;
   animation-fill-mode: both;
-
-  @keyframes beer-animation {
-    0% {
-      background-position: 0 0, 0 0;
-    }
-    100% {
-      background-position: 0 -10%, 0 100%;
-    }
-  }
-
-  @scroll-timeline beer-timeline {
-    start: 0%;
-    end: 100%;
-    time-range: 10s;
-  }
 }
 
+@keyframes beer-animation {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 0 -10%, 0 100%;
+  }
+}
+@scroll-timeline beer-timeline {
+  start: 0%;
+  end: 100%;
+  time-range: 10s;
+}
 .title {
   color: white;
   font-weight: bold;
@@ -88,13 +85,11 @@ body {
     clip-path: inset(0 0 0 0);
   }
 }
-
 @scroll-timeline text1-timeline {
   start: 0%;
   end: 15%;
   time-range: 10s;
 }
-
 #video1 {
   animation-timeline: video1-timeline;
 }
@@ -104,7 +99,6 @@ body {
   end: 30%;
   time-range: 10s;
 }
-
 #text2 {
   justify-content: right;
   margin-left: auto;
@@ -122,13 +116,11 @@ body {
     clip-path: inset(0 0% 0 0);
   }
 }
-
 @scroll-timeline text2-timeline {
   start: 30%;
   end: 45%;
   time-range: 10s;
 }
-
 #video2 {
   animation-timeline: video2-timeline;
 }
@@ -138,7 +130,6 @@ body {
   end: 65%;
   time-range: 10s;
 }
-
 #text3 {
   animation-name: slide-in-1;
   animation-timeline: text3-timeline;
@@ -151,7 +142,6 @@ body {
   end: 80%;
   time-range: 10s;
 }
-
 @keyframes slide-in-3 {
   0% {
     clip-path: polygon(0 0, 0 0, 0 0, 0 0);
@@ -160,7 +150,6 @@ body {
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
   }
 }
-
 #video3 {
   animation-timeline: video3-timeline;
 }
@@ -170,7 +159,6 @@ body {
   end: 95%;
   time-range: 10s;
 }
-
 .attention {
   text-align: center;
   margin-top: -120px;
@@ -183,9 +171,10 @@ body {
     display: none;
   }
 }
-
 .credit {
   margin-top: 24px;
   color: white;
   text-align: center;
 }
+
+/*# sourceMappingURL=style.css.map */
