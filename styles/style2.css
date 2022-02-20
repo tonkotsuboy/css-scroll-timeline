@@ -1,0 +1,182 @@
+:root {
+  --key-color: #f4a71f;
+}
+
+html,
+body {
+  background-color: var(--key-color);
+  height: 100%;
+  font-family: sans-serif;
+}
+
+.main {
+  padding-bottom: 140px;
+  padding-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+  background-image: url(../images/bubble_S.svg), url(../images/bubble_L.svg);
+  animation-name: beer-animation;
+  animation-timeline: beer-timeline;
+  animation-duration: 10s;
+  animation-fill-mode: both;
+}
+@keyframes beer-animation {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 0 -10%, 0 100%;
+  }
+}
+@scroll-timeline beer-timeline {
+  .main {
+    start: 0%;
+    end: 100%;
+    time-range: 10s;
+  }
+}
+
+.title {
+  color: white;
+  font-weight: bold;
+  font-size: 60px;
+  text-align: center;
+  margin-top: 140px;
+  margin-bottom: 140px;
+}
+
+.text,
+.video {
+  margin-top: 120px;
+}
+
+.text {
+  background-color: #fff;
+  height: 80px;
+  font-family: sans-serif;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  width: min(90%, 500px);
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.video {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  animation-name: slide-in-3;
+  animation-duration: 10s;
+  animation-fill-mode: both;
+}
+
+#text1 {
+  animation-name: slide-in-1;
+  animation-timeline: text1-timeline;
+  animation-duration: 10s;
+  animation-fill-mode: both;
+}
+
+@keyframes slide-in-1 {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+@scroll-timeline text1-timeline {
+  start: 0%;
+  end: 15%;
+  time-range: 10s;
+}
+#video1 {
+  animation-timeline: video1-timeline;
+}
+
+@scroll-timeline video1-timeline {
+  start: 15%;
+  end: 30%;
+  time-range: 10s;
+}
+#text2 {
+  justify-content: right;
+  margin-left: auto;
+  animation-name: slide-in-2;
+  animation-timeline: text2-timeline;
+  animation-duration: 10s;
+  animation-fill-mode: both;
+}
+
+@keyframes slide-in-2 {
+  0% {
+    clip-path: inset(0 0 0 100%);
+  }
+  100% {
+    clip-path: inset(0 0% 0 0);
+  }
+}
+@scroll-timeline text2-timeline {
+  start: 30%;
+  end: 45%;
+  time-range: 10s;
+}
+#video2 {
+  animation-timeline: video2-timeline;
+}
+
+@scroll-timeline video2-timeline {
+  start: 50%;
+  end: 65%;
+  time-range: 10s;
+}
+#text3 {
+  animation-name: slide-in-1;
+  animation-timeline: text3-timeline;
+  animation-duration: 10s;
+  animation-fill-mode: both;
+}
+
+@scroll-timeline text3-timeline {
+  start: 65%;
+  end: 80%;
+  time-range: 10s;
+}
+@keyframes slide-in-3 {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+#video3 {
+  animation-timeline: video3-timeline;
+}
+
+@scroll-timeline video3-timeline {
+  start: 80%;
+  end: 95%;
+  time-range: 10s;
+}
+.attention {
+  text-align: center;
+  margin-top: -120px;
+  margin-bottom: -100px;
+  color: white;
+}
+
+@supports (animation-timeline: text3-timeline) {
+  .attention {
+    display: none;
+  }
+}
+.credit {
+  margin-top: 24px;
+  color: white;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style2.css.map */
