@@ -187,11 +187,10 @@ body {
 
 // @animation-timeline非対応ブラウウザでは、アニメーションをOFFにする
 @supports not (animation-timeline: my-timeline) {
-  * {
+  .main, .video, .text {
     animation-duration: 0s !important;
   }
 }
-
 
 .credit {
   margin-top: 24px;

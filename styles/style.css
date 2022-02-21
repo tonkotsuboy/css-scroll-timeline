@@ -172,7 +172,7 @@ body {
   }
 }
 @supports not (animation-timeline: my-timeline) {
-  * {
+  .main, .video, .text {
     animation-duration: 0s !important;
   }
 }
