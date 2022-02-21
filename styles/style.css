@@ -54,6 +54,7 @@ body {
   font-family: sans-serif;
   font-size: 26px;
   display: flex;
+  justify-content: center;
   align-items: center;
   font-weight: bold;
   width: min(90%, 500px);
@@ -100,7 +101,6 @@ body {
   time-range: 10s;
 }
 #text2 {
-  justify-content: right;
   margin-left: auto;
   animation-name: slide-in-2;
   animation-timeline: text2-timeline;
@@ -160,9 +160,13 @@ body {
   time-range: 10s;
 }
 .attention {
+  position: fixed;
+  width: 100%;
+  top: 24px;
+  background-color: rgba(246, 106, 106, 0.9);
+  z-index: 20;
+  padding: 12px 24px;
   text-align: center;
-  margin-top: -120px;
-  margin-bottom: -100px;
   color: white;
 }
 
